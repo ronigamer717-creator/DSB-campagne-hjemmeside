@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DSB</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        height: 100px;
+        background-color: #f0f0f0;
+        display: flex;
+        align-items: center;
+        /* keep items centered vertically but start a little from left */
+        justify-content: flex-start;
+        padding-left: 20px; /* nudge content off the edge */
+        position: relative; /* containing block for absolute logo */
+      }
+      .header-content {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        /* leave room on the right so items don’t run under logo */
+        padding-right: 100px;
+      }
+      .header-logo {
+        /* absolute right positioning so it sits nearly at the edge */
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .header-logo img {
+        height: 60px;
+        display: block;
+      }
+      .header-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        color: #c41e3a;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: opacity 0.3s;
+      }
+      .header-item:hover {
+        opacity: 0.7;
+      }
+      .header-item svg {
+        width: 24px;
+        height: 24px;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="header-item">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <span>Menu</span>
+        </div>
+        <div class="header-item">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          <span>Søg</span>
+        </div>
+        <div class="header-item">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span>Log ind</span>
+        </div>
+        <!-- new navigation item for Dit Valg Tæller -->
+        <div class="header-item">
+          <a href="dit-valg.html" style="color: inherit; text-decoration: none">
+            <span>Dit Valg Tæller</span>
+          </a>
+        </div>
+      </div>
+      <!-- end header-content -->
+      <!-- right-aligned logo outside header-content -->
+      <div class="header-logo">
+        <img src="dsb-logo.png" alt="DSB logo" />
+      </div>
+    </header>
+    <img src="Screenshot 2026-03-06 131316.png" alt="DSB" />
+  </body>
+</html>
